@@ -170,6 +170,15 @@
     .direction:hover { transform: translateY(-50%) scale(1.06); }
     .direction-left { left: 7%; }
     .direction-right { right: 7%; }
+    .direction-forward {
+      top: 42%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .direction-forward:hover { transform: translate(-50%, -50%) scale(1.06); }
+    .direction-forward .sign-board::before { background: #d4a017; }
+    .direction-forward .sign-icon { background: #f5e6c8; }
+    .direction-forward .sign-arrow { color: #d4a017; }
+    .direction-forward:hover .sign-arrow { transform: translateY(-4px); }
 
     .sign-post {
       width: 6px; height: 50px;
@@ -221,6 +230,11 @@
     }
     .road-arrow-left { left: 30%; }
     .road-arrow-right { right: 30%; }
+    .road-arrow-forward {
+      position: absolute; top: 38%; left: 50%; transform: translateX(-50%);
+      font-size: 2.2rem; opacity: 0.3; pointer-events: none; z-index: 4;
+      color: rgba(255,255,255,0.6);
+    }
 
     /* Little flowers on grass */
     .flower {
@@ -238,6 +252,8 @@
       .sun { width: 50px; height: 50px; top: 4%; right: 8%; }
       .direction-left { left: 3%; }
       .direction-right { right: 3%; }
+      .direction-forward { top: 38%; }
+      .direction-forward .sign-board { min-width: 120px; padding: 0.8rem; }
       .sign-board { min-width: 140px; padding: 1rem; }
       .sign-board h2 { font-size: 0.95rem; }
       .sign-board p { display: none; }
@@ -273,6 +289,7 @@
 
       <span class="road-arrow road-arrow-left">&#9664;</span>
       <span class="road-arrow road-arrow-right">&#9654;</span>
+      <span class="road-arrow-forward">&#9650;</span>
 
       <!-- Flowers on grass -->
       <span class="flower" style="bottom:8%;left:5%;">&#127804;</span>
@@ -300,6 +317,16 @@
           <h2>集训管理</h2>
           <p>日历、甘特图、模块编辑<br>数据同步到云端</p>
           <div class="sign-arrow">向右 &#8594;</div>
+        </div>
+        <div class="sign-post"></div>
+      </a>
+
+      <a href="practice.html" class="direction direction-forward">
+        <div class="sign-board">
+          <div class="sign-icon">&#9997;</div>
+          <h2>刷题练习</h2>
+          <p>13个知识点专项训练<br>每知识点10道精选题</p>
+          <div class="sign-arrow">向前 &#8593;</div>
         </div>
         <div class="sign-post"></div>
       </a>

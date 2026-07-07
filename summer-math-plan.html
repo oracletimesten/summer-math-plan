@@ -54,6 +54,7 @@
       padding: 4rem 0 3rem;
       text-align: center;
       margin-bottom: 3rem;
+      position: relative;
     }
     .hero h1 {
       font-size: 2.2rem;
@@ -74,6 +75,19 @@
       font-size: 0.85rem;
       margin-top: 1rem;
     }
+    .hero .home-link {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.15);
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      transition: background 0.2s;
+    }
+    .hero .home-link:hover { background: rgba(255,255,255,0.3); }
 
     /* Sections */
     section { margin-bottom: 3.5rem; }
@@ -329,6 +343,7 @@
 
   <!-- Hero -->
   <div class="hero">
+    <a href="./index.html" class="home-link">&#8592; 返回主页</a>
     <div class="container">
       <h1>四年级升五年级奥数</h1>
       <p class="subtitle">暑假系统学习计划</p>
