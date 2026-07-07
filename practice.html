@@ -588,6 +588,18 @@ function toggleAllAnswers() {
 
 renderSidebar();
 renderQuestions();
+
+window.addEventListener('load', function() {
+  if (typeof renderMathInElement !== 'undefined') {
+    renderMathInElement(document.getElementById('main'), {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });
+  }
+});
 </script>
 
 </body>
